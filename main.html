@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        /* CSS for the holder and its items */
+        #holder {
+            display: flex;           /* Enables Flexbox */
+            flex-wrap: wrap;         /* Allows items to wrap onto new rows */
+            justify-content: space-evenly; /* Evenly spaces items with equal space between them */
+            gap: 10px;               /* Optional: Adds gap between items */
+        }
 
+        .item {
+            background-color: lightgray;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 100px;  /* Set width for items (can be adjusted as needed) */
+            text-align: center;
+        }
+        
+        /* Specific styles for item 3 (optional) */
+        #holder > .item:nth-child(3) {
+            background-color: lightblue; /* For illustration: changes background color for item 3 */
+        }
+    </style>
+</head>
 <body>
-<div class="holder">
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-    <div class="item">Item 3</div>
-</div>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <div id="holder">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <!-- Add more items here to see the wrapping effect -->
+    </div>
 
 </body>
-
 </html>
+
